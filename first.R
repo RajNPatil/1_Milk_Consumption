@@ -3,6 +3,6 @@ first <- function() {
   return(x)
 }
 
-second <- function(first) {
-  4+first
+second <- function(x) {
+  4+x
 }
