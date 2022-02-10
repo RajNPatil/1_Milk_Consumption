@@ -83,6 +83,14 @@ fifth <- function() {
 ## b <- a[,1]
 ## max(b[complete.cases(b)])
 
-sixth <- function() {
-  
-}
+
+meanCol <- function(y)
+  {
+  nc <- ncol(y)
+  mean <- numeric(c(nc))
+  for (i in 1:nc) 
+    {
+    mean[i] <- mean(y[,i])
+    }
+  mean
+  }
