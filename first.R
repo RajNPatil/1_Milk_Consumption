@@ -84,13 +84,13 @@ fifth <- function() {
 ## max(b[complete.cases(b)])
 
 
-meanCol <- function(y)
+meanCol <- function(y, removeNA = TRUE) ##removeNA function removes all the NA values
   {
   nc <- ncol(y)
   mean <- numeric(c(nc))
   for (i in 1:nc) 
     {
-    mean[i] <- mean(y[,i])
+    mean[i] <- mean(y[,i], na.rm = removeNA) ##na.rm takes the reference from removeNA function
     }
   mean
   }
