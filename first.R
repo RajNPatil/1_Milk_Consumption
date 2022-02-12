@@ -93,4 +93,22 @@ meanCol <- function(y, removeNA = TRUE) ##removeNA function removes all the NA v
     mean[i] <- mean(y[,i], na.rm = removeNA) ##na.rm takes the reference from removeNA function
     }
   mean
+}
+
+
+## Lexical Scoping ##
+m.pow <- function(n)
+{
+  pow <- function(x)
+  {
+    x^n
   }
+  pow
+}
+
+cube <- m.pow(3)
+sqr <-  m.pow(2)
+
+##ls(environment(cube))  //returns what is in the environment of the cube
+##get("n",environment(cube))  //returns value of "n"
+
